@@ -101,7 +101,7 @@ class Wordfence_Slack_Notifications_Admin {
 
 		add_settings_field(
 			$apiKeyId,
-			__( 'API Key', 'wf-slack-notifications' ),
+			__( 'Slack API Access Token', 'wf-slack-notifications' ),
 			array( $this, $apiKeyId . '_cb' ),
 			$this->plugin_name,
 			$this->option_name . '_general',
