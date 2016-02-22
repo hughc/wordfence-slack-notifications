@@ -172,7 +172,7 @@ class Wordfence_Slack_Notifications {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-		$this->loader->add_action('wf_newIssue', $this, 'send_notification');
+		$this->loader->add_action('wf_new_issues', $this, 'send_notification');
 		$this->loader->add_action('wf_alert', $this, 'send_notification');
 	}
 
