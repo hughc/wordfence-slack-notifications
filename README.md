@@ -10,9 +10,11 @@ It is not, at this point, recommended for production sites. If there is interest
 ### Usage
 Once activated (alongside [Wordfence With Notifications](https://github.com/hughc/wordfence-with-notifications)), proceed to Settings > Wordfence Slack Notifications and enter a valid [Slack API Access Token](https://api.slack.com/web) and the channel to which you want to post.
 
-The plugin posts to Slack when a matching action hook is fired. You can test that the integration you have set up is working, by using the 'send test email' function in the Settings screen  [Wordfence With Notifications](https://github.com/hughc/wordfence-with-notifications). You should see a Slack post as follows:
+The plugin posts to Slack when a matching action hook is fired. Initially, the only hooks implemented are those around general alerts and new issues. This will cover a lot of posibilities, as many other actions use the alert function.
 
-[[https://github.com/hughc/wordfence-slack-notifications/raw/master/images/screenshot.png|alt=screenhot from Slack]]
+ You can test that the integration you have set up is working, by using the 'send test email' function in the Settings screen  [Wordfence With Notifications](https://github.com/hughc/wordfence-with-notifications). You should see a Slack post as follows:
+
+![screenshot from Slack](https://github.com/hughc/wordfence-slack-notifications/raw/master/images/screenshot.png)
 
 ### Code
 The code is based on Wordpress Plugin Boilerplate, and [this gist](https://gist.github.com/nadar/68a347d2d1de586e4393) for posting to the Slack API.
