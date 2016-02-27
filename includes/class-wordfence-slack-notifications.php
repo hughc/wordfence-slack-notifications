@@ -191,12 +191,12 @@ class Wordfence_Slack_Notifications {
 		$key = get_option( $options_prefix . '_api_key', '');
 		$channel = "#" . get_option( $options_prefix . '_channel', '');
 	    $ch = curl_init("https://slack.com/api/chat.postMessage");
-	    $data = http_build_query([
+	    $data = http_build_query(array(
 	        "token" => $key,
-	    	"channel" => $channel, //"#mychannel",
-	    	"text" => $message, //"Hello, Foo-Bar channel message.",
+	    	"channel" => $channel,
+	    	"text" => $message, 
 	    	"username" => get_bloginfo("name"),
-	    ]);
+	    ));
 	    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 	    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
